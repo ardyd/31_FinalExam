@@ -84,7 +84,7 @@ class Pig(object):
         heavier = self.heavier_pig(other_pig)
         new_piggy = Pig(heavier)
         return new_piggy
-    
+
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
