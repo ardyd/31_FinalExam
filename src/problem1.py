@@ -20,7 +20,7 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
     run_test_problem1a()
-    # run_test_problem1b()
+    run_test_problem1b()
 
 
 def run_test_problem1a():
@@ -175,7 +175,12 @@ def problem1b(numbers):
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
-
+    amount = len(numbers)//3
+    total = 0
+    for k in range(amount):
+        total += numbers[amount] + k
+    return total
+    
 ###############################################################################
 # Our tests use the following to print error messages in red.
 # Do NOT change it.  You do NOT have to do anything with it.
