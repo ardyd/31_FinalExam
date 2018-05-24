@@ -42,13 +42,14 @@ class Pig(object):
     def get_weight(self):
         """ Returns this Pig's weight. """
         # TODO: Implement and test this method.
-        self.weight
+        return self.weight
 
     def eat(self, pounds_of_slop):
         """
         Increments this Pig's weight by the given pounds_of_slop.
         """
         # TODO: Implement and test this method.
+        self.weight += pounds_of_slop
 
     def eat_for_a_year(self):
         """
@@ -61,6 +62,7 @@ class Pig(object):
           -- eat 365 pounds of slop.
         """
         # TODO: Implement and test this method.
+        self.eat(365)
 
     def heavier_pig(self, other_pig):
         """
@@ -68,6 +70,10 @@ class Pig(object):
         whichever is heavier.
         """
         # TODO: Implement and test this method.
+        if self.get_weight >= other_pig.get_weight:
+            return self
+        else:
+            return other_pig
 
     def new_pig(self, other_pig):
         """
@@ -75,7 +81,10 @@ class Pig(object):
           of this Pig and the other_Pig.
         """
         # TODO: Implement and test this method.
-
+        heavier = self.heavier_pig(other_pig)
+        new_piggy = Pig(heavier)
+        return new_piggy
+    
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
