@@ -136,7 +136,7 @@ def problem5(m, numbers1, numbers2):
       :type [str]
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
@@ -144,6 +144,7 @@ def problem5(m, numbers1, numbers2):
         if numbers1[k]*m == numbers2[k]:
             return [numbers1[k], numbers2[k]]
     return []
+
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
