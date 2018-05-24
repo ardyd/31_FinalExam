@@ -103,7 +103,7 @@ And this one for n=14:
                 d = d + 10
             print(n-k-d, end='')
         print()
-        
+
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
