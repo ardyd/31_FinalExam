@@ -2,8 +2,8 @@
 Final exam, problem 3.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and David Ardy.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -87,8 +87,22 @@ And this one for n=14:
     #   print Xs for the spaces until you figure out where the problem is
     #   (and then change the Xs back to spaces).
     # ------------------------------------------------------------------
+    for k in range(n):
+        print((n-k-1)*' ', end=' ')
 
+        for j in range(k+1):
+            if j + 1 > 9:
+                j = j - 10
+            print(j+1, end='')
 
+        print(' ', end='')
+        print((k+2)*'*', end=' ')
+
+        for d in range(n-k):
+            if n - k - d > 9:
+                d = d + 10
+            print(n-k-d, end='')
+        print()
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
