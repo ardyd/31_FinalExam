@@ -93,7 +93,7 @@ def problem3(point, circle1, circle2, window):
       :type window:    rg.RoseWindow
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
 
@@ -115,9 +115,25 @@ def problem3(point, circle1, circle2, window):
     line1_3.attach_to(window)
 
     # second set of lines
-    line2_1 = rg.Line(line1_1.get_midpoint, line1_2.get_midpoint)
-    line2_2 = rg.Line(line1_1.get_midpoint, line1_3.get_midpoint)
-    line2_3 = rg.Line(line1_2.get_midpoint, line1_3.get_midpoint)
+    line1_1_1 = line1_1.clone
+    line1_1_2 = line1_2.clone
+    line1_1_3 = line1_3.clone
+
+    # Couldn't get line.get_midpoint to work, so manually got midpoint
+    mid_1_x = (circle1.center.x + circle2.center.x)/2
+    mid_1_y = (circle1.center.y + circle2.center.y) / 2
+    mid_2_x = (circle1.center.x + point.x) / 2
+    mid_2_y = (circle1.center.y + point.y) / 2
+    mid_3_x = (circle2.center.x + point.x) / 2
+    mid_3_y = (circle2.center.y + point.y) / 2
+
+    mid_1 = rg.Point(mid_1_x, mid_1_y)
+    mid_2 = rg.Point(mid_2_x, mid_2_y)
+    mid_3 = rg.Point(mid_3_x, mid_3_y)
+
+    line2_1 = rg.Line(mid_1, mid_2)
+    line2_2 = rg.Line(mid_1, mid_3)
+    line2_3 = rg.Line(mid_2, mid_3)
 
     line2_1.color = circle2.fill_color
     line2_2.color = circle2.fill_color
