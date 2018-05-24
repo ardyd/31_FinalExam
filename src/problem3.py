@@ -129,6 +129,7 @@ def problem3(point, circle1, circle2, window):
 
     window.render()
 
+
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # The   try .. except   prevents error messages on the console from being
