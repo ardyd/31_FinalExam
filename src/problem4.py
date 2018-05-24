@@ -37,10 +37,12 @@ class Pig(object):
         Side effects: Sets instance variables as needed by the other methods.
         """
         # TODO: Implement and test this method.
+        self.weight = weight
 
     def get_weight(self):
         """ Returns this Pig's weight. """
         # TODO: Implement and test this method.
+        self.weight
 
     def eat(self, pounds_of_slop):
         """
