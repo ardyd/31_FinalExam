@@ -19,9 +19,9 @@ def main():
     print()
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
-    # run_test_problem2a()
+    run_test_problem2a()
     # run_test_problem2b()
-    run_test_problem2c()
+    # run_test_problem2c()
 
 
 def is_prime(n):
@@ -179,7 +179,7 @@ def problem2a(x, sequence):
     for k in range(len(sequence)):
         if x < sequence[k]:
             count += 1
-            new_seq[count] += sequence[k]
+            new_seq[count] = sequence[k]
     return new_seq
 
 
