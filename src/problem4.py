@@ -29,6 +29,25 @@ def main():
     #     -- Call each method that you implement below.
     # -------------------------------------------------------------------------
 
+    # Test cases:
+    p1 = Pig(9)
+    print(p1.get_weight())  # Should print 9
+
+    p2 = Pig(33)
+    print(p2.get_weight())  # expected 33
+
+    p1.eat(12)
+    print(p1.get_weight())  # expected 20 because 9+12 = 21
+
+    p2.eat_for_a_year()
+    print(p2.get_weight())  # should be a huge number (66828)
+
+    print(p1.heavier_pig(p2))  # expected to be other pig
+    print(p2)  # confirm that it returned the correct pig
+
+    new_p = p1.new_pig(p2)
+    print(new_p.get_weight())  # expected 66828
+
 
 class Pig(object):
     def __init__(self, weight):
@@ -62,7 +81,8 @@ class Pig(object):
           -- eat 365 pounds of slop.
         """
         # TODO: Implement and test this method.
-        self.eat(365)
+        for k in range(365):
+            self.eat(k + 1)
 
     def heavier_pig(self, other_pig):
         """
@@ -70,7 +90,9 @@ class Pig(object):
         whichever is heavier.
         """
         # TODO: Implement and test this method.
-        if self.get_weight >= other_pig.get_weight:
+        s = self.get_weight()
+        o = other_pig.get_weight()
+        if s > o:
             return self
         else:
             return other_pig
@@ -82,7 +104,8 @@ class Pig(object):
         """
         # TODO: Implement and test this method.
         heavier = self.heavier_pig(other_pig)
-        new_piggy = Pig(heavier)
+        w = heavier.get_weight()
+        new_piggy = Pig(w)
         return new_piggy
 
 
