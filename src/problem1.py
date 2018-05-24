@@ -180,7 +180,7 @@ def problem1b(numbers):
     for k in range(amount):
         total += numbers[amount] + k
     return total
-    
+
 ###############################################################################
 # Our tests use the following to print error messages in red.
 # Do NOT change it.  You do NOT have to do anything with it.
