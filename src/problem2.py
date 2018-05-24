@@ -174,7 +174,7 @@ def problem2a(x, sequence):
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
-    new_seq = []
+    new_seq = [len(sequence)]
     count = 0
     for k in range(len(sequence)):
         if x < sequence[k]:
