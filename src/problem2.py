@@ -170,16 +170,16 @@ def problem2a(x, sequence):
       :type sequence:  [int]
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
-    new_seq = [len(sequence)]
+    new_seq = []
     count = 0
     for k in range(len(sequence)):
         if x < sequence[k]:
             count += 1
-            new_seq[count] = sequence[k]
+            new_seq.append(sequence[k])
     return new_seq
 
 
